@@ -19,8 +19,9 @@ const CTA = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-primary-foreground/70">
-          <a href="tel:+1-800-555-0123" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">+49 123 456 7890<Phone className="w-4 h-4" />
-            +1 (800) 555-0123
+          <a href="tel:+49-123-456-7890" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
+            <Phone className="w-4 h-4" />
+            +49 123 456 7890
           </a>
           <a href="mailto:hello@claritas.com" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">hello@visascom.com<Mail className="w-4 h-4" />
             hello@claritas.com
