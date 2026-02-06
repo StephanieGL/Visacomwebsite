@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { FileText, Check, Compass } from "lucide-react";
+import { FileText, Check, Compass, ArrowRight } from "lucide-react";
 import handshakeImage from "@/assets/handshake.jpg";
 import { Link } from "react-router-dom";
 const Hero = () => {
@@ -37,6 +37,7 @@ const Hero = () => {
               <Link to="/schedule">
                 <Button className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-6 text-sm font-semibold tracking-wide">
                   Schedule your appointment now
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
             </div>

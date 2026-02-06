@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Compass } from "lucide-react";
+import { Compass, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import visaPassportImage from "@/assets/visa-passport.jpg";
 
@@ -18,6 +18,7 @@ const About = () => {
             <Link to="/schedule">
               <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background">
                 SCHEDULE APPOINTMENT
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
           </div>
