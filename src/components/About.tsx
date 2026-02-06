@@ -13,7 +13,7 @@ const About = () => {
               Our team of certified immigration consultants brings decades of combined experience to every case. We handle the complexity so you can focus on your future.
             </p>
             <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background">
-              WORK WITH US
+              SCHEDULE APPOINTMENT
             </Button>
           </div>
 

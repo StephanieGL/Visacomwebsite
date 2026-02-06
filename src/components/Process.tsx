@@ -27,7 +27,7 @@ const Process = () => {
               variant="outline"
               className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background w-fit"
             >
-              WORK WITH US
+              SCHEDULE APPOINTMENT
             </Button>
           </div>
 
