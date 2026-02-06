@@ -28,7 +28,9 @@ const About = () => {
                 <p className="text-xs md:text-sm font-bold text-foreground leading-tight uppercase">
                   Navigate The<br />Visa World<br />With VISAS.COM
                 </p>
-                <p className="text-[10px] text-muted-foreground mt-2 font-medium">EST. 2015</p>
+                <p className="text-[10px] text-muted-foreground mt-2 font-medium">EST. 2026
+
+              </p>
               </div>
             </div>
           </div>
