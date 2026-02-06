@@ -1,8 +1,6 @@
 import { Compass } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-background border-t border-border py-12 lg:py-16">
+  return <footer className="bg-background border-t border-border py-12 lg:py-16">
       <div className="container-wide mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -10,7 +8,7 @@ const Footer = () => {
             <div className="stamp-badge w-24 h-24 flex items-center justify-center mb-6 bg-primary/10">
               <div className="text-center">
                 <Compass className="w-8 h-8 text-primary mx-auto" />
-                <p className="text-[8px] font-bold text-foreground mt-1">CLARITAS</p>
+                <p className="text-[8px] font-bold text-foreground mt-1">VISAS.COM</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -55,16 +53,10 @@ const Footer = () => {
             <a href="#" className="hover:text-foreground transition-colors">PRIVACY</a>
             <a href="#" className="hover:text-foreground transition-colors">ACCESSIBILITY</a>
           </div>
-          <p className="text-sm text-muted-foreground text-center">
-            CLARITAS VISA CONSULTING
-          </p>
-          <p className="text-sm text-muted-foreground">
-            ©CLARITAS. ALL RIGHTS RESERVED
-          </p>
+          <p className="text-sm text-muted-foreground text-center">VISA.COM VISA CONSULTING</p>
+          <p className="text-sm text-muted-foreground">©VISA.COM. ALL RIGHTS RESERVED</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
