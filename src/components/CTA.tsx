@@ -5,8 +5,8 @@ const CTA = () => {
   return (
     <section id="contact" className="section-padding bg-primary text-primary-foreground">
       <div className="container-narrow mx-auto text-center">
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-6">
-          Ready to start your journey?
+        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+          READY TO START YOUR JOURNEY?
         </h2>
         <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
           Book a free consultation with one of our immigration specialists. 
@@ -15,12 +15,11 @@ const CTA = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <Button 
-            variant="secondary" 
-            size="xl"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+            size="lg"
+            className="bg-background text-foreground hover:bg-background/90 rounded-full px-10 py-7 text-sm font-semibold tracking-wide"
           >
-            Schedule Free Consultation
-            <ArrowRight className="w-4 h-4 ml-1" />
+            SCHEDULE FREE CONSULTATION
+            <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </div>
 

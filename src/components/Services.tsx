@@ -1,72 +1,60 @@
-import { Briefcase, GraduationCap, Users, Building2, Plane, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Briefcase, GraduationCap, Users } from "lucide-react";
 
 const services = [
   {
     icon: Briefcase,
-    title: "Work Visas",
-    description: "H-1B, L-1, O-1, and employment-based immigration for professionals and executives.",
+    title: "SIGN ON AS A CLIENT",
+    description: "Get personalized visa guidance with a dedicated consultant who understands your unique situation. From initial assessment to final approval, we're with you every step of the way.",
   },
   {
     icon: GraduationCap,
-    title: "Student Visas",
-    description: "F-1, J-1, and M-1 visas for international students and exchange visitors.",
+    title: "DEEP DIVE DOCUMENT REVIEW",
+    description: "Our experts meticulously review every document to ensure accuracy and completeness. We catch potential issues before they become problems, saving you time and stress.",
   },
   {
     icon: Users,
-    title: "Family Immigration",
-    description: "Spouse visas, fiancé visas, and family-based green card petitions.",
-  },
-  {
-    icon: Building2,
-    title: "Business Immigration",
-    description: "Investor visas, treaty trader, and corporate relocation services.",
-  },
-  {
-    icon: Plane,
-    title: "Travel Visas",
-    description: "Tourist, business visitor, and transit visas for international travel.",
-  },
-  {
-    icon: FileText,
-    title: "Document Services",
-    description: "Apostille, translation, notarization, and document authentication.",
+    title: "LEARN FROM US",
+    description: "Access our library of resources, guides, and webinars designed to demystify the immigration process. Knowledge is power when navigating bureaucratic systems.",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="section-padding bg-background">
+    <section id="services" className="section-padding bg-secondary">
       <div className="container-wide mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-medium text-accent-foreground uppercase tracking-wider mb-4">
-            Our Services
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6">
-            Comprehensive visa solutions
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+            HOW TO WORK WITH US
           </h2>
           <p className="text-muted-foreground text-lg">
-            From work permits to family reunification, we provide end-to-end support for all your immigration needs.
+            Choose the path that best fits your immigration journey. We offer flexible solutions tailored to your needs.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group p-8 rounded-2xl bg-card card-elevated hover:shadow-elevated transition-all duration-300 cursor-pointer"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="bg-background rounded-3xl p-8 lg:p-10 flex flex-col h-full"
             >
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
-                <service.icon className="w-6 h-6 text-secondary-foreground group-hover:text-accent-foreground transition-colors duration-300" />
+              <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-6">
+                <service.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="font-serif text-xl font-medium text-foreground mb-3">
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed flex-grow mb-8">
                 {service.description}
               </p>
+              <Button 
+                variant="outline"
+                className="rounded-full px-6 py-5 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background w-fit"
+              >
+                MORE WITH US
+              </Button>
             </div>
           ))}
         </div>

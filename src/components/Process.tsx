@@ -1,86 +1,64 @@
-import { MessageSquare, FileUp, Search, CheckCircle2 } from "lucide-react";
-
-const steps = [
-  {
-    number: "01",
-    icon: MessageSquare,
-    title: "Initial Consultation",
-    description: "Schedule a free consultation to discuss your goals and assess your eligibility for various visa options.",
-  },
-  {
-    number: "02",
-    icon: FileUp,
-    title: "Document Collection",
-    description: "Securely upload your documents through our encrypted portal. We'll review and organize everything.",
-  },
-  {
-    number: "03",
-    icon: Search,
-    title: "Application Preparation",
-    description: "Our experts prepare and review your application, ensuring accuracy and completeness.",
-  },
-  {
-    number: "04",
-    icon: CheckCircle2,
-    title: "Submission & Tracking",
-    description: "We submit your application and provide real-time updates throughout the process.",
-  },
-];
+import { Button } from "@/components/ui/button";
+import { FileCheck, Shield } from "lucide-react";
 
 const Process = () => {
   return (
-    <section id="process" className="section-padding bg-muted/30">
+    <section id="process" className="section-padding bg-card">
       <div className="container-wide mx-auto">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-medium text-accent-foreground uppercase tracking-wider mb-4">
-            How It Works
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6">
-            A seamless process from start to finish
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            We've designed every step to be transparent, efficient, and stress-free.
-          </p>
-        </div>
-
-        {/* Process Steps */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Connecting line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
-
-          <div className="space-y-12 lg:space-y-0">
-            {steps.map((step, index) => (
-              <div
-                key={step.number}
-                className={`relative lg:flex items-center gap-12 ${
-                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                }`}
-              >
-                {/* Content */}
-                <div className={`lg:w-1/2 ${index % 2 === 0 ? "lg:text-right lg:pr-12" : "lg:text-left lg:pl-12"}`}>
-                  <div className={`p-8 rounded-2xl bg-card card-elevated ${index % 2 === 0 ? "lg:ml-auto" : "lg:mr-auto"} max-w-md`}>
-                    <span className="text-5xl font-serif font-medium text-border">
-                      {step.number}
-                    </span>
-                    <h3 className="font-serif text-xl font-medium text-foreground mt-4 mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+          {/* Left - Case Studies Card */}
+          <div className="card-cream p-10 lg:p-14 flex flex-col">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="stamp-badge w-20 h-20 flex-shrink-0 flex items-center justify-center bg-primary/10">
+                <div className="text-center">
+                  <FileCheck className="w-6 h-6 text-primary mx-auto" />
+                  <p className="text-[8px] font-bold text-foreground mt-1">SUCCESS</p>
                 </div>
-
-                {/* Icon Node */}
-                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-card border-4 border-background shadow-card items-center justify-center z-10">
-                  <step.icon className="w-6 h-6 text-primary" />
-                </div>
-
-                {/* Spacer for alternating layout */}
-                <div className="hidden lg:block lg:w-1/2" />
               </div>
-            ))}
+            </div>
+            
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+              CLIENT CASE STUDIES
+            </h2>
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed flex-grow">
+              Discover how we've helped thousands of clients successfully navigate their visa journeys. From complex work permits to family reunifications, our track record speaks for itself.
+            </p>
+            <Button 
+              variant="outline"
+              className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background w-fit"
+            >
+              WORK WITH US
+            </Button>
+          </div>
+
+          {/* Right - Image/Visual Area */}
+          <div className="bg-primary/20 rounded-3xl p-8 flex items-center justify-center min-h-[300px]">
+            <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
+              <div className="bg-background rounded-2xl p-6 aspect-square flex items-center justify-center">
+                <div className="text-center">
+                  <p className="font-serif text-4xl font-bold text-primary">98%</p>
+                  <p className="text-sm text-muted-foreground mt-2">Success Rate</p>
+                </div>
+              </div>
+              <div className="bg-background rounded-2xl p-6 aspect-square flex items-center justify-center">
+                <div className="text-center">
+                  <p className="font-serif text-4xl font-bold text-primary">2.5K+</p>
+                  <p className="text-sm text-muted-foreground mt-2">Clients Served</p>
+                </div>
+              </div>
+              <div className="bg-background rounded-2xl p-6 aspect-square flex items-center justify-center">
+                <div className="text-center">
+                  <p className="font-serif text-4xl font-bold text-primary">15+</p>
+                  <p className="text-sm text-muted-foreground mt-2">Years Experience</p>
+                </div>
+              </div>
+              <div className="bg-background rounded-2xl p-6 aspect-square flex items-center justify-center">
+                <div className="text-center">
+                  <p className="font-serif text-4xl font-bold text-primary">50+</p>
+                  <p className="text-sm text-muted-foreground mt-2">Countries</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

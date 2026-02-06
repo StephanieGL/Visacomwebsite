@@ -4,23 +4,23 @@ import { Upload, Bell, Lock, MessageCircle, FileText, CheckCircle } from "lucide
 const features = [
   {
     icon: Upload,
-    title: "Secure Document Upload",
-    description: "256-bit encrypted file transfer",
+    title: "Secure Upload",
+    description: "256-bit encrypted",
   },
   {
     icon: Bell,
-    title: "Real-Time Notifications",
-    description: "Instant updates on your case status",
+    title: "Real-Time Updates",
+    description: "Instant notifications",
   },
   {
     icon: Lock,
     title: "Bank-Level Security",
-    description: "SOC 2 compliant infrastructure",
+    description: "SOC 2 compliant",
   },
   {
     icon: MessageCircle,
     title: "Direct Messaging",
-    description: "Chat with your dedicated advisor",
+    description: "Chat with experts",
   },
 ];
 
@@ -31,53 +31,52 @@ const Portal = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div>
-            <p className="text-sm font-medium text-accent-foreground uppercase tracking-wider mb-4">
-              Client Portal
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6">
-              Everything you need, in one place
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+              YOUR DIGITAL CONCIERGE
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Our secure client portal gives you 24/7 access to your case documents, real-time progress tracking, and direct communication with your legal team.
+              Access your case documents, track progress, and communicate with your legal team 24/7 through our secure client portal.
             </p>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-2 gap-6 mb-8">
               {features.map((feature) => (
                 <div key={feature.title} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-5 h-5 text-secondary-foreground" />
+                  <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-foreground mb-1">{feature.title}</h4>
+                    <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <Button variant="hero">
-              Access Your Portal
+            <Button 
+              className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-6 text-sm font-semibold tracking-wide"
+            >
+              ACCESS PORTAL
             </Button>
           </div>
 
           {/* Portal Preview */}
           <div className="relative">
-            <div className="rounded-2xl bg-card card-elevated p-6 lg:p-8">
+            <div className="rounded-3xl bg-secondary p-6 lg:p-8">
               {/* Mock header */}
               <div className="flex items-center justify-between mb-6 pb-6 border-b border-border">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                    <span className="text-primary-foreground font-medium text-sm">JD</span>
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                    <span className="text-primary-foreground font-semibold text-sm">JD</span>
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Welcome back, John</p>
+                    <p className="font-semibold text-foreground">Welcome back, John</p>
                     <p className="text-sm text-muted-foreground">H-1B Application</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent">
-                  <span className="w-2 h-2 rounded-full bg-accent-foreground" />
-                  <span className="text-xs font-medium text-accent-foreground">In Progress</span>
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20">
+                  <span className="w-2 h-2 rounded-full bg-primary" />
+                  <span className="text-xs font-semibold text-primary">In Progress</span>
                 </div>
               </div>
 
@@ -85,16 +84,16 @@ const Portal = () => {
               <div className="mb-8">
                 <div className="flex justify-between text-sm mb-3">
                   <span className="text-muted-foreground">Application Progress</span>
-                  <span className="font-medium text-foreground">65%</span>
+                  <span className="font-semibold text-foreground">65%</span>
                 </div>
-                <div className="h-2 bg-muted rounded-full overflow-hidden">
+                <div className="h-3 bg-background rounded-full overflow-hidden">
                   <div className="h-full w-[65%] bg-primary rounded-full" />
                 </div>
               </div>
 
               {/* Document checklist */}
               <div className="space-y-3">
-                <p className="text-sm font-medium text-foreground mb-4">Required Documents</p>
+                <p className="text-sm font-semibold text-foreground mb-4">Required Documents</p>
                 {[
                   { name: "Passport Copy", status: "complete" },
                   { name: "Employment Letter", status: "complete" },
@@ -103,16 +102,19 @@ const Portal = () => {
                 ].map((doc) => (
                   <div
                     key={doc.name}
-                    className="flex items-center justify-between p-3 rounded-lg bg-muted/50"
+                    className="flex items-center justify-between p-4 rounded-2xl bg-background"
                   >
                     <div className="flex items-center gap-3">
-                      <FileText className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm text-foreground">{doc.name}</span>
+                      <FileText className="w-5 h-5 text-muted-foreground" />
+                      <span className="text-sm font-medium text-foreground">{doc.name}</span>
                     </div>
                     {doc.status === "complete" ? (
-                      <CheckCircle className="w-5 h-5 text-accent-foreground" />
+                      <CheckCircle className="w-5 h-5 text-primary" />
                     ) : (
-                      <Button variant="subtle" size="sm">
+                      <Button 
+                        size="sm"
+                        className="bg-primary/20 text-primary hover:bg-primary hover:text-primary-foreground rounded-full text-xs font-semibold px-4"
+                      >
                         Upload
                       </Button>
                     )}
@@ -120,9 +122,6 @@ const Portal = () => {
                 ))}
               </div>
             </div>
-
-            {/* Decorative gradient */}
-            <div className="absolute -z-10 inset-0 translate-x-4 translate-y-4 rounded-2xl bg-secondary/50" />
           </div>
         </div>
       </div>
