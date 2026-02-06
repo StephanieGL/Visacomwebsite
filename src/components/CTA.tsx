@@ -23,8 +23,9 @@ const CTA = () => {
             <Phone className="w-4 h-4" />
             +49 123 456 7890
           </a>
-          <a href="mailto:hello@claritas.com" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">hello@visascom.com<Mail className="w-4 h-4" />
-            hello@claritas.com
+          <a href="mailto:hello@visascom.com" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
+            <Mail className="w-4 h-4" />
+            hello@visascom.com
           </a>
         </div>
       </div>
