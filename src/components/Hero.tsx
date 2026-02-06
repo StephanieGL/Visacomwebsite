@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { FileText, Globe, Check, Compass } from "lucide-react";
+import { FileText, Check, Compass } from "lucide-react";
+import handshakeImage from "@/assets/handshake.jpg";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -13,10 +14,12 @@ const Hero = () => {
             <div className="hidden lg:flex justify-center items-center">
               <div className="relative">
                 {/* Organic decorative shape */}
-                <div className="w-80 h-80 rounded-full bg-primary/20 flex items-center justify-center">
-                  <div className="w-64 h-64 rounded-full bg-primary/30 flex items-center justify-center">
-                    <Globe className="w-32 h-32 text-primary" />
-                  </div>
+                <div className="w-80 h-80 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={handshakeImage} 
+                    alt="Professional handshake" 
+                    className="w-72 h-72 rounded-full object-cover"
+                  />
                 </div>
                 {/* Floating elements */}
                 <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-accent flex items-center justify-center animate-bounce" style={{ animationDuration: '3s' }}>
