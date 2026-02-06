@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { FileText, Globe, Compass } from "lucide-react";
+import { FileText, Globe, Check, Compass } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -50,7 +50,7 @@ const Hero = () => {
       <div className="absolute top-8 right-8 lg:top-16 lg:right-16 hidden md:block">
         <div className="stamp-badge w-32 h-32 flex items-center justify-center rotate-12 bg-background">
           <div className="text-center">
-            <Compass className="w-8 h-8 text-primary mx-auto mb-1" />
+            <Check className="w-8 h-8 text-primary mx-auto mb-1" />
             <p className="text-[10px] font-bold text-foreground leading-tight">
               TRUSTED<br/>VISA<br/>EXPERTS
             </p>
