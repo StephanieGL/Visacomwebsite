@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FileText, Globe, Compass } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -33,11 +34,13 @@ const Hero = () => {
                 NAVIGATE YOUR VISA JOURNEY WITH CLARITAS' EXPERT-GUIDED IMMIGRATION SERVICES
               </h1>
               
-              <Button 
-                className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-6 text-sm font-semibold tracking-wide"
-              >
-                Schedule your appointment now
-              </Button>
+              <Link to="/schedule">
+                <Button 
+                  className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-6 text-sm font-semibold tracking-wide"
+                >
+                  Schedule your appointment now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

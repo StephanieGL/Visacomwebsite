@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { FileCheck, Shield } from "lucide-react";
+import { FileCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Process = () => {
   return (
@@ -23,12 +24,14 @@ const Process = () => {
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed flex-grow">
               Discover how we've helped thousands of clients successfully navigate their visa journeys. From complex work permits to family reunifications, our track record speaks for itself.
             </p>
-            <Button 
-              variant="outline"
-              className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background w-fit"
-            >
-              SCHEDULE APPOINTMENT
-            </Button>
+            <Link to="/schedule">
+              <Button 
+                variant="outline"
+                className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background w-fit"
+              >
+                SCHEDULE APPOINTMENT
+              </Button>
+            </Link>
           </div>
 
           {/* Right - Image/Visual Area */}

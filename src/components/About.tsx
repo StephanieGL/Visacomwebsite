@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Award, Shield, Compass } from "lucide-react";
+import { Compass } from "lucide-react";
+import { Link } from "react-router-dom";
 const About = () => {
   return <section id="about" className="section-padding bg-background">
       <div className="container-wide mx-auto">
@@ -12,9 +13,11 @@ const About = () => {
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Our team of certified immigration consultants brings decades of combined experience to every case. We handle the complexity so you can focus on your future.
             </p>
-            <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background">
-              SCHEDULE APPOINTMENT
-            </Button>
+            <Link to="/schedule">
+              <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background">
+                SCHEDULE APPOINTMENT
+              </Button>
+            </Link>
           </div>
 
           {/* Right - Badge */}
