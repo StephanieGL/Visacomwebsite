@@ -2,8 +2,8 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Schedule = () => {
-  // Replace this with your actual Calendly link
-  const calendlyUrl = "https://calendly.com/your-username";
+  // Your Calendly scheduling link
+  const calendlyUrl = "https://calendly.com/sety-lomejor/30min?hide_gdpr_banner=1";
 
   return (
     <div className="min-h-screen bg-background">
