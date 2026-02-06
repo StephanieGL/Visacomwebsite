@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Award, Shield, Compass } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="section-padding bg-background">
+  return <section id="about" className="section-padding bg-background">
       <div className="container-wide mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Content */}
@@ -14,10 +12,7 @@ const About = () => {
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Our team of certified immigration consultants brings decades of combined experience to every case. We handle the complexity so you can focus on your future.
             </p>
-            <Button 
-              variant="outline"
-              className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background"
-            >
+            <Button variant="outline" className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background">
               WORK WITH US
             </Button>
           </div>
@@ -28,7 +23,7 @@ const About = () => {
               <div className="text-center">
                 <Compass className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-2" />
                 <p className="text-xs md:text-sm font-bold text-foreground leading-tight uppercase">
-                  Navigate The<br/>Visa World<br/>With Clarity
+                  Navigate The<br />Visa World<br />With VISAS.COM
                 </p>
                 <p className="text-[10px] text-muted-foreground mt-2 font-medium">EST. 2015</p>
               </div>
@@ -36,8 +31,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
