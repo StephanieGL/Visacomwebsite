@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Claritas made what I thought would be an overwhelming process feel manageable and stress-free. Their team was responsive and thorough.",
+    quote: "Visas.com made what I thought would be an overwhelming process feel manageable and stress-free. Their team was responsive and thorough.",
     author: "Maria Chen",
     role: "Software Engineer",
     company: "H-1B Visa Approved",
