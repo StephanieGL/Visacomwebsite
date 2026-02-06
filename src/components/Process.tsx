@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { FileCheck } from "lucide-react";
+import { FileCheck, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Process = () => {
@@ -30,6 +30,7 @@ const Process = () => {
                 className="rounded-full px-8 py-6 text-sm font-semibold tracking-wide border-2 border-foreground text-foreground hover:bg-foreground hover:text-background w-fit"
               >
                 SCHEDULE APPOINTMENT
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
           </div>
