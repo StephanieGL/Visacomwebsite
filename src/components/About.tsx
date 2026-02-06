@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Compass } from "lucide-react";
 import { Link } from "react-router-dom";
+import visaPassportImage from "@/assets/visa-passport.jpg";
+
 const About = () => {
   return <section id="about" className="section-padding bg-background">
       <div className="container-wide mx-auto">
@@ -20,17 +22,25 @@ const About = () => {
             </Link>
           </div>
 
-          {/* Right - Badge */}
+          {/* Right - Framed Image with small badge overlay */}
           <div className="flex justify-center items-center">
-            <div className="stamp-badge w-48 h-48 md:w-64 md:h-64 flex items-center justify-center bg-primary/10 rotate-6">
-              <div className="text-center">
-                <Compass className="w-12 h-12 md:w-16 md:h-16 text-primary mx-auto mb-2" />
-                <p className="text-xs md:text-sm font-bold text-foreground leading-tight uppercase">
-                  Navigate The<br />Visa World<br />With VISAS.COM
-                </p>
-                <p className="text-[10px] text-muted-foreground mt-2 font-medium">EST. 2026
-
-              </p>
+            <div className="relative">
+              {/* Framed passport/visa image */}
+              <div className="rounded-2xl border-4 border-primary/30 p-2 bg-background shadow-lg">
+                <img 
+                  src={visaPassportImage} 
+                  alt="Passport with visa stamps" 
+                  className="w-80 h-60 md:w-96 md:h-72 object-cover rounded-xl" 
+                />
+              </div>
+              {/* Small badge overlay in top left corner */}
+              <div className="absolute -top-6 -left-6 stamp-badge w-20 h-20 md:w-24 md:h-24 flex items-center justify-center bg-primary/10 rotate-6">
+                <div className="text-center">
+                  <Compass className="w-5 h-5 md:w-6 md:h-6 text-primary mx-auto mb-0.5" />
+                  <p className="text-[7px] md:text-[8px] font-bold text-foreground leading-tight uppercase">
+                    Navigate The<br />Visa World<br />With VISAS.COM
+                  </p>
+                </div>
               </div>
             </div>
           </div>
