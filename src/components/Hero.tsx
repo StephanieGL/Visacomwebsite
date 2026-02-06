@@ -1,61 +1,56 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, FileCheck } from "lucide-react";
+import { FileText, Globe, Compass } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
-      
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-secondary/40 rounded-full blur-3xl" />
+    <section className="relative overflow-hidden">
+      {/* Main Hero Content */}
+      <div className="bg-secondary">
+        <div className="container-wide mx-auto px-6 lg:px-12 py-16 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Decorative Element */}
+            <div className="hidden lg:flex justify-center items-center">
+              <div className="relative">
+                {/* Organic decorative shape */}
+                <div className="w-80 h-80 rounded-full bg-primary/20 flex items-center justify-center">
+                  <div className="w-64 h-64 rounded-full bg-primary/30 flex items-center justify-center">
+                    <Globe className="w-32 h-32 text-primary" />
+                  </div>
+                </div>
+                {/* Floating elements */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-accent flex items-center justify-center animate-bounce" style={{ animationDuration: '3s' }}>
+                  <FileText className="w-8 h-8 text-accent-foreground" />
+                </div>
+                <div className="absolute -bottom-6 left-8 w-12 h-12 rounded-full bg-primary flex items-center justify-center animate-bounce" style={{ animationDuration: '2.5s', animationDelay: '0.5s' }}>
+                  <Compass className="w-6 h-6 text-primary-foreground" />
+                </div>
+              </div>
+            </div>
 
-      <div className="relative container-wide mx-auto px-6 lg:px-12 py-20 lg:py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/60 text-secondary-foreground text-sm font-medium mb-8 animate-fade-up">
-            <Shield className="w-4 h-4" />
-            Trusted by 2,500+ clients worldwide
+            {/* Right - Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-8">
+                NAVIGATE YOUR VISA JOURNEY WITH CLARITAS' EXPERT-GUIDED IMMIGRATION SERVICES
+              </h1>
+              
+              <Button 
+                className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-6 text-sm font-semibold tracking-wide"
+              >
+                WORK WITH US
+              </Button>
+            </div>
           </div>
+        </div>
+      </div>
 
-          {/* Headline */}
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-foreground leading-tight mb-6 animate-fade-up delay-100">
-            Your visa journey,{" "}
-            <span className="text-gradient">simplified</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up delay-200">
-            Expert guidance through every step of your immigration process. 
-            We handle the complexity so you can focus on your future.
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-up delay-300">
-            <Button variant="hero">
-              Start Your Application
-              <ArrowRight className="w-4 h-4 ml-1" />
-            </Button>
-            <Button variant="heroOutline">
-              Book a Consultation
-            </Button>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 text-sm text-muted-foreground animate-fade-up delay-400">
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-accent-foreground" />
-              <span>24-48hr Response</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-accent-foreground" />
-              <span>Bank-Level Security</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <FileCheck className="w-4 h-4 text-accent-foreground" />
-              <span>98% Success Rate</span>
-            </div>
+      {/* Stamp Badge */}
+      <div className="absolute top-8 right-8 lg:top-16 lg:right-16 hidden md:block">
+        <div className="stamp-badge w-32 h-32 flex items-center justify-center rotate-12 bg-background">
+          <div className="text-center">
+            <Compass className="w-8 h-8 text-primary mx-auto mb-1" />
+            <p className="text-[10px] font-bold text-foreground leading-tight">
+              TRUSTED<br/>VISA<br/>EXPERTS
+            </p>
           </div>
         </div>
       </div>
