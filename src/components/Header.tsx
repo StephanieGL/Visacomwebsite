@@ -6,9 +6,7 @@ const Header = () => {
   return <>
       {/* Announcement Bar */}
       <div className="bg-primary text-primary-foreground text-center py-2 px-4 text-sm font-medium">
-        <span className="hidden sm:inline">NOW ACCEPTING</span>
-        <span className="sm:hidden">ACCEPTING</span>
-        {" "}NEW CLIENTS FOR MARCH & BEYOND
+        Now accepting new clients...!
       </div>
 
       <header className="sticky top-0 z-50 bg-background border-b border-border">
