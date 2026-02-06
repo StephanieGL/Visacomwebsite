@@ -1,9 +1,46 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidget: (options: { url: string; parentElement: HTMLElement }) => void;
+    };
+  }
+}
 
 const Schedule = () => {
-  // Your Calendly scheduling link
   const calendlyUrl = "https://calendly.com/sety-lomejor/30min?hide_gdpr_banner=1";
+
+  useEffect(() => {
+    // Initialize Calendly widget after component mounts
+    const initCalendly = () => {
+      const container = document.getElementById("calendly-container");
+      if (window.Calendly && container) {
+        window.Calendly.initInlineWidget({
+          url: calendlyUrl,
+          parentElement: container,
+        });
+      }
+    };
+
+    // Check if Calendly script is already loaded
+    if (window.Calendly) {
+      initCalendly();
+    } else {
+      // Wait for script to load
+      const checkCalendly = setInterval(() => {
+        if (window.Calendly) {
+          clearInterval(checkCalendly);
+          initCalendly();
+        }
+      }, 100);
+
+      // Cleanup
+      return () => clearInterval(checkCalendly);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -43,10 +80,9 @@ const Schedule = () => {
           </div>
 
           {/* Calendly Embed */}
-          <div className="bg-card rounded-3xl p-6 md:p-8 border border-border">
+          <div className="bg-card rounded-3xl p-2 md:p-4 border border-border overflow-hidden">
             <div 
-              className="calendly-inline-widget" 
-              data-url={calendlyUrl}
+              id="calendly-container"
               style={{ minWidth: '320px', height: '700px' }}
             />
           </div>
