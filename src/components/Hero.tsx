@@ -47,7 +47,7 @@ const Hero = () => {
       </div>
 
       {/* Stamp Badge */}
-      <div className="absolute top-4 right-8 lg:top-8 lg:right-16 hidden md:block">
+      <div className="absolute top-4 right-4 lg:top-8 lg:right-8 hidden md:block">
         <div className="stamp-badge w-24 h-24 flex items-center justify-center rotate-12 bg-background">
           <div className="text-center">
             <Check className="w-5 h-5 text-primary mx-auto mb-0.5" />
