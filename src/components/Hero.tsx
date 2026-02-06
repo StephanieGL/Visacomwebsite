@@ -36,7 +36,7 @@ const Hero = () => {
               <Button 
                 className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-6 text-sm font-semibold tracking-wide"
               >
-                SCHEDULE APPOINTMENT
+                Schedule your appointment now
               </Button>
             </div>
           </div>
